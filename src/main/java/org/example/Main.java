@@ -1,9 +1,8 @@
 package org.example;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
+        /*
         nodeList NodeList = new nodeList();
         node Node1 = new node();
         NodeList.add_node(Node1);
@@ -23,8 +22,11 @@ public class Main {
         Edge1.weight = 1;
         NodeList.add_edge(Edge1);
         Node1.addChild(Edge1);
-
-        for (node Node : NodeList.returnAllChild()){
+        */
+        fileModule FileModule = new fileModule();
+        FileModule.toformTree();
+        nodeList tree = FileModule.fileNodes;
+        for (node Node : tree.returnAllChild()){
             System.out.println(Node.name + ":");
             for (edge Edgek : Node.childlist){
                 System.out.println(Edgek.childNode.name + Edgek.weight);
