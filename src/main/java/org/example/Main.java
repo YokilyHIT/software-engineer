@@ -94,6 +94,10 @@ public class Main {
         if(comd==3){
            //queryBridgeWords query = new queryBridgeWords(nodelist);
            //result = query.queryBW(word[0],word[1]);
+            if(word.length!=2){
+                System.out.println("enter two words");
+                return null;
+            }
             query.queryBW(word[0],word[1]);
             return query.output;
         }
@@ -110,23 +114,34 @@ public class Main {
             graphDrawer lightedGraph = new graphDrawer();
             if (word_5.length == 2){
                 pathCalc.PathResult pathResult = pathcalc.calcShortestPath(word_5[0], word_5[1],nodelist);
-                lightedGraph.drawHighlightGraph(nodelist, pathResult.path,pathResult.pathEdge,"h_graph.png");
-                System.out.println("The shortest distance between " + word_5[0] + " and " + word_5[1] + " is "+ pathResult.length);
+                if(pathResult == null){
+                    System.out.println("no such path");
+                }
+                else{
+                    lightedGraph.drawHighlightGraph(nodelist, pathResult.path,pathResult.pathEdge,"h_graph.png");
+                    System.out.println("The shortest distance between " + word_5[0] + " and " + word_5[1] + " is "+ pathResult.length);
+                }
 
             } else if (word_5.length == 1) {
                 Map<node, pathCalc.PathResult> resultMap= pathcalc.calcShortestPathsFromNode(word_5[0], nodelist);
                 // 打印最短路径信息
-                for (Map.Entry<node, pathCalc.PathResult> entry : resultMap.entrySet()) {
-                    node targetNode = entry.getKey();
-                    pathCalc.PathResult result = entry.getValue();
+                if(resultMap!=null){
+                    for (Map.Entry<node, pathCalc.PathResult> entry : resultMap.entrySet()) {
+                        node targetNode = entry.getKey();
+                        pathCalc.PathResult result = entry.getValue();
 
-                    System.out.print("Shortest path to " + targetNode.name + ": ");
-                    for (node pathNode : result.path) {
-                        System.out.print(pathNode.name + " ");
+                        System.out.print("Shortest path to " + targetNode.name + ": ");
+                        for (node pathNode : result.path) {
+                            System.out.print(pathNode.name + " ");
+                        }
+
+                        System.out.println("[with distance] " + result.length);
                     }
-
-                    System.out.println("[with distance] " + result.length);
                 }
+                else{
+                    System.out.println("no such word");
+                }
+
 
             }else {
                 System.out.println("Enter one word or two");
@@ -134,9 +149,10 @@ public class Main {
 
         }
         if(comd == 6){
+            System.out.println("Enter 's' to end the random walk:");
             randomWalk random = new randomWalk();
             String result = random.randomWalk(nodelist);
-            System.out.println(result);
+            //System.out.println(result);
 
 
         }

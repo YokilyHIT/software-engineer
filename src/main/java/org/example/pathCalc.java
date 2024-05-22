@@ -76,6 +76,9 @@ public class pathCalc {
 
     // Calculate the shortest path from the given word to all other words in the graph and display them
     public Map<node, PathResult> calcShortestPathsFromNode(String word, nodeList fileNodes) {
+        if(!fileNodes.is_node_exist(word)){
+            return null;
+        }
         Map<node, PathResult> results = new HashMap<>();
         Map<node, Integer> distance = new HashMap<>();
         Map<node, node> predecessor = new HashMap<>();
