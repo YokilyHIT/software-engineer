@@ -50,8 +50,7 @@ public class fileModule {
                 for (String word : words.toArray(new String[0])) {
                     // 如果单词非空，则添加到数组中中
                     if (!word.isEmpty()) {
-                        if (buffer.name == null) {
-                            buffer.name = word;
+                        if (buffer.name == null) {                            buffer.name = word;
                             //System.out.println("First word: "+buffer.name);
                             fileNodes.add_node(buffer);
                         }

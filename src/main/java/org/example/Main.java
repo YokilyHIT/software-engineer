@@ -139,7 +139,7 @@ public class Main {
                     }
                 }
                 else{
-                    System.out.println("no such word");
+                    System.out.println("enter one or two word");
                 }
 
 
