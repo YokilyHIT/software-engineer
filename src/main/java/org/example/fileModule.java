@@ -9,18 +9,24 @@ import java.util.List;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
+/**
+ * set default mock parameter.（方法说明）
+ * @param
+ * @return data manager(返回值说明)
+ * @throws Exception if has error(异常说明)
+ */
 public class fileModule {
     //请写入本地存放文本的绝对路径
     String filePath = "";
     //String filePath = "F:\\Campus\\engineer\\softwareEngineering\\lab1\\mySW\\src\\main\\java\\org\\example\\test.txt";
    // String filePath = "E:\\javaProject\\lab1_1\\src\\main\\java\\org\\example\\test.txt";
-    nodeList fileNodes = new nodeList();
+    public nodeList fileNodes = new nodeList();
 
     //文件路径作为参数的构造函数
     public  fileModule(String fpath){
         this.filePath = fpath;
     }
-    void loadFile_formTree(){
+    public void loadFile_formTree(){
     
         {
             try {

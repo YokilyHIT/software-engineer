@@ -11,7 +11,8 @@ public class generateNewText {
     //nodeList fileNodes;
 
 
-    String generateNewText(String inputText,nodeList fileNodes){
+
+    String generateNewText(String inputText, nodeList fileNodes){
         String[] words = inputText.split("\\s+");
         StringBuilder output = new StringBuilder();
         // 定义一个正则表达式，匹配标点符号
