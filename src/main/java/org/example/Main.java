@@ -114,6 +114,7 @@ public class Main {
             graphDrawer lightedGraph = new graphDrawer();
             if (word_5.length == 2){
                 pathCalc.PathResult pathResult = pathcalc.calcShortestPath(word_5[0], word_5[1],nodelist);
+<<<<<<< HEAD
                 if(pathResult == null){
                     System.out.println("no such path");
                 }
@@ -121,6 +122,14 @@ public class Main {
                     lightedGraph.drawHighlightGraph(nodelist, pathResult.path,pathResult.pathEdge,"h_graph.png");
                     System.out.println("The shortest distance between " + word_5[0] + " and " + word_5[1] + " is "+ pathResult.length);
                 }
+=======
+                if(pathResult== null){
+                    System.out.println("no such path.");
+                    return "";
+                }
+                lightedGraph.drawHighlightGraph(nodelist, pathResult.path,pathResult.pathEdge,"h_graph.png");
+                System.out.println("The shortest distance between " + word_5[0] + " and " + word_5[1] + " is "+ pathResult.length);
+>>>>>>> 4414e8eedd0be596aca8806982dd0b5770e24fbf
 
             } else if (word_5.length == 1) {
                 Map<node, pathCalc.PathResult> resultMap= pathcalc.calcShortestPathsFromNode(word_5[0], nodelist);

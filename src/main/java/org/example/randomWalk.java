@@ -40,6 +40,7 @@ public class randomWalk {
             }
             edge currentEdge = currentNode.childlist.get(random.nextInt(currentNode.childlist.size()));
             if (visitedEdges.contains(currentEdge)) {
+                output.append("Moved to node: ").append(currentEdge.childNode.name).append("\n");
                 output.append("Encountered a repeated edge, stopping random walk.");
                 System.out.println("Encountered a repeated edge, stopping random walk.");
                 stopMonitoring();

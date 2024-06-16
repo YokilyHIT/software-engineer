@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 To test the tree,if the tree works.
 To test,to live,to love.more sentences ----more happj ,;/.  genius!
 love you sentences
+=======
+To traverse distant galaxies and encounter mysteries of the universe, to understand the origins of life and to venture into the cosmos with courage and curiosity.unravel the space and time,uncover the wonders and marvels that lie beyond our reach,expand our knowledge and push the boundaries of human exploration.
+>>>>>>> 4414e8eedd0be596aca8806982dd0b5770e24fbf
