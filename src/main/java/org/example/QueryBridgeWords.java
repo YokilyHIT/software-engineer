@@ -2,7 +2,7 @@ package org.example;
 
 import java.util.*;
 
-public class queryBridgeWords {
+public class QueryBridgeWords {
     nodeList fileNodes;
     /*
     String word1_name;
@@ -13,8 +13,9 @@ public class queryBridgeWords {
     int reslt =-1;
     String output ="";
     //构造函数
-    public queryBridgeWords(nodeList fn){
-        this.fileNodes = fn;
+    public QueryBridgeWords(nodeList fn){
+        //his.fileNodes = fn;
+        this.fileNodes = new nodeList(fn);  //在nodeList里新增了构造函数
         this.findEdge = new ArrayList<>();
     }
     //String  queryBridgeWords(String word1, String word2){
@@ -50,11 +51,12 @@ public class queryBridgeWords {
                         isFirst = false;
                     }
                     else{
-                        strbd.append(",").append(Edge.childNode.name);
+                        strbd.append(',').append(Edge.childNode.name);
                     }
                 }
                 strbd.append(".\n");
-                this.output = strbd.toString();
+                //this.output = strbd.toString();
+                this.output = new String(strbd);
             }else{
                 this.output += "No bridge words from "+"'" + word1+ "' to '"+word2+"'\n";
             }
@@ -68,9 +70,9 @@ public class queryBridgeWords {
             this.output = strbd.toString();
                 // }
         }
+
+
+    }
+        }
         //return output.toString();
         //return reslt;
-    }
-
-
-}

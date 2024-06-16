@@ -89,13 +89,17 @@ public class Main {
 
     public static String processCommand(nodeList nodelist,String words,int comd) throws IOException {
         //int result = -1;
-        queryBridgeWords query = new queryBridgeWords(nodelist);
+        QueryBridgeWords query = new QueryBridgeWords(nodelist);
         String[] word = words.split(" ");
         if(comd==3){
            //queryBridgeWords query = new queryBridgeWords(nodelist);
            //result = query.queryBW(word[0],word[1]);
             if(word.length!=2){
+<<<<<<< HEAD
                 System.out.println("enter two words");
+=======
+                System.out.println("Please enter two words");
+>>>>>>> 693fa38b127d491b654caa4dd89ff060aaf4ee58
                 return null;
             }
             query.queryBW(word[0],word[1]);

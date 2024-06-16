@@ -6,6 +6,11 @@ public class nodeList {
 
     private List<edge> edges = new ArrayList<>();
 
+    public nodeList(){}
+    public nodeList(nodeList nl){
+        this.nodes = nl.nodes;
+        this.edges = nl.edges;
+    }
     void add_edge(edge Edge){
         this.edges.add(Edge);
     }
